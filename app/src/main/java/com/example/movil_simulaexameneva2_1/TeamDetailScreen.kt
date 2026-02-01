@@ -10,6 +10,7 @@ import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.*
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -125,11 +126,23 @@ fun TeamDetailScreen(teamId: String?, navController: NavController) {
                 ) {
                     Column(modifier = Modifier.padding(16.dp)) {
                         DetailRow(label = "Presidente", value = team.president)
-                        Divider(modifier = Modifier.padding(vertical = 8.dp))
+                        HorizontalDivider(
+                            modifier = Modifier.padding(vertical = 8.dp),
+                            thickness = DividerDefaults.Thickness,
+                            color = DividerDefaults.color
+                        )
                         DetailRow(label = "Año Fundación", value = team.foundationYear)
-                        Divider(modifier = Modifier.padding(vertical = 8.dp))
+                        HorizontalDivider(
+                            modifier = Modifier.padding(vertical = 8.dp),
+                            thickness = DividerDefaults.Thickness,
+                            color = DividerDefaults.color
+                        )
                         DetailRow(label = "Estadio", value = team.stadium)
-                        Divider(modifier = Modifier.padding(vertical = 8.dp))
+                        HorizontalDivider(
+                            modifier = Modifier.padding(vertical = 8.dp),
+                            thickness = DividerDefaults.Thickness,
+                            color = DividerDefaults.color
+                        )
                         // 这里只是模拟数据，数据类里没有 ligasGanadas 字段，你可以加上或硬编码演示
                         DetailRow(label = "Ligas Ganadas", value = "35 (Simulado)")
                     }

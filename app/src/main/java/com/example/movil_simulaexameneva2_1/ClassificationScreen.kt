@@ -10,6 +10,7 @@ import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Share
 import androidx.compose.material3.*
+import androidx.compose.material3.HorizontalDivider
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -84,7 +85,7 @@ fun ClassificationScreen(navController: NavController) {
                             navController.navigate("team_detail/${stats.team.id}")
                         }
                     )
-                    Divider(color = Color.LightGray, thickness = 0.5.dp)
+                    HorizontalDivider(thickness = 0.5.dp, color = Color.LightGray)
                 }
             }
         }
